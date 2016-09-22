@@ -1,10 +1,20 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 2016/09/22, 13:06:12
-    Author     : yoshihiko
-*/
+@charset "UTF-8";
 
+/** hide element class(not {dispaly: none;}) */
+.display_none
+, .display_none *
+{
+    /* basic hide style */
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    z-index: -10;
+    left: -100px;
+
+    /* hide child */
+    overflow: hidden;
+
+    /* fix position for hidden anchor, radio... */
+    position: fixed;
+    top: 30px;
+}
