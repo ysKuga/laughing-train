@@ -14,7 +14,7 @@ trait util {
     static public function hash_keys($path = null) {
         $keys = array();
         if (is_string($path) || is_numeric($path)) {
-            $keys = explode(static::$hash_delimiter);
+            $keys = explode(static::$hash_delimiter, $path);
         } else if (is_array($path)) {
             // if array, direct dimension search
             $keys = $path;
